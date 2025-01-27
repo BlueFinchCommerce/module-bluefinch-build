@@ -1,3 +1,7 @@
+<?php
+    $viewModel = $block->getViewModel()
+?>
+
 <!-- Add CSS Variables -->
 <style>
     :root {
@@ -6,7 +10,8 @@
         --footer-background-color: #EE4266;
         --footer-bottom-background-color: #FFD23F;
 
-        --theme__color__primary: #EE4266;
+        /* #EE4266 */
+        --theme__color__primary: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/primary_colour')) ?>;
         --theme__color__primary-alt: #FFD23F;
         --theme__color__secondary: #540D6E;
 

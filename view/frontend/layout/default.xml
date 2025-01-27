@@ -2,7 +2,11 @@
     <body>
         <referenceBlock name="head.additional">
             <block name="exodus_head_variables"
-                   template="Gene_Exodus::css_variables.phtml" />
+                   template="Gene_Exodus::css_variables.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Gene\Exodus\ViewModel\Theme</argument>
+                </arguments>
+            </block>
         </referenceBlock>
     </body>
 </page>
