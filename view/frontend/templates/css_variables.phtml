@@ -5,17 +5,25 @@
 <!-- Add CSS Variables -->
 <style>
     :root {
+
+        --primary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/primary_colour')) ?>;
+        --secondary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/secondary_colour')) ?>;
+        --tertiary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/tertiary_colour')) ?>;
+
+        --font-family: "Yuji Mai", sans-serif;
+
+
+        /* OLD */
+
         --body-color: #f5f3ed;
 
         --footer-background-color: #EE4266;
         --footer-bottom-background-color: #FFD23F;
 
-        /* #EE4266 */
         --theme__color__primary: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/primary_colour')) ?>;
+        --theme__color__secondary: ;
         --theme__color__primary-alt: #FFD23F;
         --theme__color__secondary: #540D6E;
-
-        --font-family: "Yuji Mai", sans-serif;
     }
 </style>
 
