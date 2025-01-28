@@ -13,7 +13,7 @@
                 <label>General Configuration</label>
                 <field id="primary_colour" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Primary Colour</label>
-                    <comment>Primary Colour used for buttons etc.</comment>
+                    <comment>Primary Colour used for primary buttons.</comment>
                 </field>
                 <field id="secondary_colour" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Secondary Colour</label>
@@ -25,7 +25,7 @@
                 </field>
                 <field id="font_family" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Font Family</label>
-                    <comment>Font family for theme</comment>
+                    <comment>Specify the name of the font to use for your theme. The font name should match how it is registered on the font service (e.g., Google Fonts) and must not include special characters. If this field is left empty, the default Magento font, 'Open Sans', will be used.</comment>
                 </field>
                 <field id="logo" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Logo</label>

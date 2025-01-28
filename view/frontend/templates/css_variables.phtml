@@ -1,33 +1,30 @@
 <?php
-    $viewModel = $block->getViewModel()
+$viewModel = $block->getViewModel();
+
+    // Get the font family and replace spaces with '+'
+$fontFamily = $viewModel->getStoreConfig('exodus/general/font_family') ? $viewModel->getStoreConfig('exodus/general/font_family') : 'Open Sans';
+$encodedFontFamily = str_replace(' ', '+', $fontFamily);
 ?>
 
 <!-- Add CSS Variables -->
 <style>
     :root {
-
         --primary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/primary_colour')) ?>;
         --secondary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/secondary_colour')) ?>;
         --tertiary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/tertiary_colour')) ?>;
 
-        --font-family: "Yuji Mai", sans-serif;
 
+        --theme__color__primary: var(--primary-color);
+        --theme__color__secondary: var(--secondary-color);
+        --theme__color__tertiary: var(--tertiary-color);
 
-        /* OLD */
-
-        --body-color: #f5f3ed;
-
-        --footer-background-color: #EE4266;
-        --footer-bottom-background-color: #FFD23F;
-
-        --theme__color__primary: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/primary_colour')) ?>;
-        --theme__color__secondary: ;
-        --theme__color__primary-alt: #FFD23F;
-        --theme__color__secondary: #540D6E;
+        --font-family: "<?= $block->escapeHtml($fontFamily) ?>", sans-serif;
     }
 </style>
 
+<?php if (!empty($fontFamily)): ?>
 <!-- Add Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yuji+Mai:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=<?=$block->escapeHtml($encodedFontFamily)?>:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<?php endif; ?>
