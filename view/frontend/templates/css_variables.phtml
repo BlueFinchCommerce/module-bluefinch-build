@@ -2,7 +2,7 @@
 $viewModel = $block->getViewModel();
 
     // Get the font family and replace spaces with '+'
-$fontFamily = $viewModel->getStoreConfig('exodus/general/font_family') ? $viewModel->getStoreConfig('exodus/general/font_family') : 'Open Sans';
+$fontFamily = $viewModel->getStoreConfig('bluefinch_build/general/font_family') ? $viewModel->getStoreConfig('exodus/general/font_family') : 'Open Sans';
 $encodedFontFamily = str_replace(' ', '+', $fontFamily);
 ?>
 
