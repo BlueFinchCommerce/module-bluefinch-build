@@ -9,10 +9,9 @@ $encodedFontFamily = str_replace(' ', '+', $fontFamily);
 <!-- Add CSS Variables -->
 <style>
     :root {
-        --primary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/primary_colour')) ?>;
-        --secondary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/secondary_colour')) ?>;
-        --tertiary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('exodus/general/tertiary_colour')) ?>;
-
+        --primary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('bluefinch_build/general/primary_colour')) ?>;
+        --secondary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('bluefinch_build/general/secondary_colour')) ?>;
+        --tertiary-color: <?= $block->escapeHtml($viewModel->getStoreConfig('bluefinch_build/general/tertiary_colour')) ?>;
 
         --theme__color__primary: var(--primary-color);
         --theme__color__secondary: var(--secondary-color);

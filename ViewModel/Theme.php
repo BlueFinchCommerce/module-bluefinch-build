@@ -1,5 +1,5 @@
 <?php
-namespace Gene\Exodus\ViewModel;
+namespace BlueFinch\Build\ViewModel;
 
 use \Magento\Framework\View\Element\Block\ArgumentInterface;
 use \Magento\Framework\App\Config\ScopeConfigInterface;
