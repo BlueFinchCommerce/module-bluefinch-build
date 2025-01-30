@@ -7,10 +7,10 @@
   },
   "autoload": {
     "files": [
-      "src/registration.php"
+      "registration.php"
     ],
     "psr-4": {
-      "BlueFinch\\Build\\": "src/"
+      "BlueFinch\\Build\\": ""
     }
   }
 }
