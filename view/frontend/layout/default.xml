@@ -8,5 +8,11 @@
                 </arguments>
             </block>
         </referenceBlock>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="view_model" xsi:type="object">BlueFinch\Build\ViewModel\Theme</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>
