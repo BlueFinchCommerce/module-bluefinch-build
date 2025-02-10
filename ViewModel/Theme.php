@@ -3,6 +3,7 @@ namespace BlueFinch\Build\ViewModel;
 
 use \Magento\Framework\View\Element\Block\ArgumentInterface;
 use \Magento\Framework\App\Config\ScopeConfigInterface;
+use \Magento\Store\Model\StoreManagerInterface;
 
 /**
  * Class GetStoreConfig
@@ -12,18 +13,25 @@ class Theme implements ArgumentInterface
 {
 
     /**
-     * @var Image
+     * @var $scopeConfig
      */
     protected $scopeConfig;
 
     /**
-     * GetStoreConfig constructor.
+     * @var $storeManager
+     */
+    protected $storeManager;
+
+    /**
      * @param ScopeConfigInterface $scopeConfig
+     * @param StoreManagerInterface $storeManager
      */
     public function __construct(
-        ScopeConfigInterface $scopeConfig
+        ScopeConfigInterface $scopeConfig,
+        StoreManagerInterface $storeManager
     ) {
         $this->scopeConfig = $scopeConfig;
+        $this->storeManager = $storeManager;
     }
 
     /**
@@ -37,5 +45,12 @@ class Theme implements ArgumentInterface
             $config,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
         );
+    }
+
+    public function getMediaUrl($path)
+    {
+        return $this->storeManager
+            ->getStore()
+            ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . $path;
     }
 }
