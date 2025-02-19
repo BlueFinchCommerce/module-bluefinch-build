@@ -47,10 +47,4 @@ class Theme implements ArgumentInterface
         );
     }
 
-    public function getMediaUrl($path)
-    {
-        return $this->storeManager
-            ->getStore()
-            ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . $path;
-    }
 }
