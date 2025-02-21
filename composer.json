@@ -1,5 +1,5 @@
 {
-  "name": "bluefinch/module-bluefinch-build",
+  "name": "bluefinchcommerce/module-bluefinch-build",
   "description": "Add functionality and root css variables to Blue Finch themes",
   "type": "magento2-module",
   "require": {
